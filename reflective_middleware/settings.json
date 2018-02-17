@@ -1,0 +1,61 @@
+{
+	"devices": [
+		{
+			"id" : "Arduino_Raspberry_Temp_Hum",
+			"sensors" : ["temperature_sensor","humidity_sensor"],
+			"rules" : [
+				{
+					"sensor": ["humidity_sensor"],
+					"action": "write",
+					"argument": "mysql",
+					"variable_action" : {
+						"condition" : "moreThan",
+						"value": "0"
+					}
+				},
+				{
+					"sensor": ["temperature_sensor"],
+					"action": "write",
+					"argument": "mongo",
+					"variable_action" : {
+						"condition" : "moreThan",
+						"value": "0"
+					}
+				}
+			]
+		}, 
+		{
+			"id" : "Arduino_VM_LightSensor",
+			"sensors" : ["light_sensor"],
+			"rules" : [
+				{
+					"sensor": ["light_sensor"],
+					"action": "write",
+					"argument": "mysql",
+					"variable_action" : {
+						"condition" : "lessThan",
+						"value": "20"
+					}
+				},
+				{
+					"sensor": ["light_sensor"],
+					"action": "write",
+					"argument": "mongo",
+					"variable_action" : {
+						"condition" : "moreThan",
+						"value": "10"
+					}
+				},
+				{
+					"sensor": ["temperature_sensor","humidity_sensor"],
+					"action": "write",
+					"argument": "nosql",
+					"variable_action" : {
+						"condition" : "equals",
+						"value": "100"
+					}
+				}
+			]
+		}
+	]
+}

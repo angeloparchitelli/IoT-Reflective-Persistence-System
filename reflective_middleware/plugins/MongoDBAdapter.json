@@ -1,0 +1,9 @@
+{
+        "username":"",
+        "password" : "",
+        "db_name" : "",
+        "host" : "",
+        "port" : "27017",
+        "collection" : "data",
+        "class_name" : "mongo"
+}
