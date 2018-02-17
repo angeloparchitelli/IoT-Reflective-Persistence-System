@@ -1,7 +1,7 @@
 /*
- *  Lettura del sensore di umidità e temperatura
- *  Utilizzo delle librerie DHT e della libreria 
- *  JSON per l'invio dei dati
+ *  Arduino code that allows to read temperature and humidity from
+ *  DHT sensor
+ *  The output is a JSON data format
  */
  
 #include <math.h>
@@ -9,11 +9,11 @@
 #include <ArduinoJson.h>
 #include <Time.h>  
 
-// Define del sensore di temperatura
+// Define temperature sensor PIN
 #define DHT22_PIN 2
 #define DHTTYPE DHT22 
 
-// Define della libreria Time
+// Define Time Library
 #define TIME_MSG_LEN  11
 #define TIME_HEADER  'T'
 #define TIME_REQUEST  7
