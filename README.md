@@ -13,6 +13,6 @@ The project was implemented as a prototype using:
 * In *reflective_middleware* there is the Core of the Project: a NodeJS Reflective Middleware.
 
 # Contacts 
-Angelo Parchitelli a dot parchitelli 89 at gmail dot com
+Angelo Parchitelli a [dot] parchitelli 89 [at] gmail [dot] com
 
 Gianfranco Micoli
